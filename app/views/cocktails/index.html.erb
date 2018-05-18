@@ -1,6 +1,17 @@
 <h1>Mister Cocktail</h1>
-<% @cocktails.each do |cocktail| %>
-  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-<% end %>
 
-<button type="button" class="btn btn-link"><%= link_to 'Create new cocktail', new_cocktail_path %></button>
+<a href='cocktails/new' class="button">Create new cocktail</a>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eaa4adf6cdb9cafa4fada1580b7c8e2c&auto=format&fit=crop&w=500&q=60'); background-size:cover;">
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

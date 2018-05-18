@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
         <!-- Add these line for detecting device width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,6 +18,15 @@
   </head>
 
   <body>
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <i class="fas fa-glass-martini"></i>
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Create a new cocktail</a>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
